@@ -201,7 +201,7 @@ Before we can jump into cleanup actions, we need to take a slight
 detour and discuss interruptible actions. These are
 [described in the Control.Exception docs](https://www.stackage.org/haddock/nightly-2016-07-17/base-4.9.0.0/Control-Exception.html#g:13). The
 basic idea is that these are actions which, even when async exceptions
-are masked, can throw an asynchronous exception. These doesn't violate
+are masked, can throw an asynchronous exception. These don't violate
 any of our comments above, since the exceptions are being thrown from
 an `IO` action. However, the exceptions are being generated as a kill
 signal from outside of our current subroutine, and therefore should be
